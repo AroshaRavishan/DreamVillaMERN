@@ -1,0 +1,50 @@
+# Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+lib/
+vendor/
+
+# dotenv environment variables file
+.env
+
+# production build
+build/
+
+# Local development environment
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependency files
+package-lock.json
+yarn.lock
+
+# Optional: Exclude your own IDE/Editor config files
+# .editorconfig
+# .eslintrc
+# .stylelintrc
+# .prettierrc
+# .tern-project
+# .babelrc
