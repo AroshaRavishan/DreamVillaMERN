@@ -52,13 +52,13 @@ function Home() {
   ];
 
   return (
-    
+
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}>
-        
+
       <WebLayout title='Home - Dream Villa'>
         <Hero backgroundImage={backgroundImage} heroText={heroText} heroDescription={heroDescription} heroDescription2={heroDescription2} />
         <motion.div>
