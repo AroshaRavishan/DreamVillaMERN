@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import WebLayout from '../Layouts/WebLayout';
+import { useState } from 'react';
+import axios from 'axios'
 
 function Signup() {
     const backgroundImageStyle = {
@@ -9,6 +11,18 @@ function Signup() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
     };
+
+    const [username, setUsername ] = useState ()
+    const [email, setEmail ] = useState ()
+    const [password, setPassword ] = useState ()
+    const [cpassword, setCpassword ] = useState ()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post('',{username, email, password, cpassword})
+        .then(result => console.log(result))
+        .catch(err=> console.log(err))
+    }
 
     return (
         <motion.div
@@ -59,17 +73,19 @@ function Signup() {
                                         </div>
                                     </div>
                                     <div className='flex justify-center my-5 md:my-10'>
-                                        <div className='grid md:flex justify-center gap-4 md:gap-20 w-full lg:w-4/5 xl:w-3/5'>
+                                        <form onSubmit={handleSubmit} className='grid md:flex justify-center gap-4 md:gap-20 w-full lg:w-4/5 xl:w-3/5'>
                                             <div className='w-full'>
                                                 <input
                                                     className="!w-full md:w-auto px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                                                     type="text"
                                                     placeholder="Username"
+                                                    onChange={(e)=>setUsername(e.target.value)}
                                                 />
                                                 <input
                                                     className="!w-full md:w-auto px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                                                     type="email"
                                                     placeholder="Email"
+                                                    onChange={(e)=>setEmail(e.target.value)}
                                                 />
                                             </div>
                                             <div className='!w-full'>
@@ -77,14 +93,16 @@ function Signup() {
                                                     className="!w-full md:w-auto px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
                                                     type="password"
                                                     placeholder="Password"
+                                                    onChange={(e)=>setPassword(e.target.value)}
                                                 />
                                                 <input
                                                     className="!w-full md:w-auto px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                                                     type="password"
                                                     placeholder="Confirm Password"
+                                                    onChange={(e)=>setCpassword(e.target.value)}
                                                 />
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
 
                                     <div class="mx-auto max-w-xs">

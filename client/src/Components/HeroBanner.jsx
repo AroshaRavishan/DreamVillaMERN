@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
-function Hero({ backgroundVideo, heroText, heroDescription, heroDescription2 }) {
-    const videoStyle = {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
+function Hero({ backgroundImage, heroText, heroDescription,heroDescription2 }) {
+    const sectionStyle = {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
     };
 
     const fadeInLeft = {
@@ -50,19 +50,16 @@ function Hero({ backgroundVideo, heroText, heroDescription, heroDescription2 }) 
     return (
         <React.Fragment>
             <section>
-                <div className="w-full h-[102vh] -mt-[100px] z-50">
-                    <video style={videoStyle} autoPlay loop muted>
-                        <source src={backgroundVideo} type="video/mp4" />
-                    </video>
+                <div style={sectionStyle} className="w-full h-[102vh] -mt-[100px] z-50">
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="container text-center overflow-hidden">
                             <motion.div
                                 initial="hidden"
                                 animate={controls}
                                 variants={fadeInLeft}
-                                className="text-gold-900"
+                                className="text-white"
                             >
-                                <h1 className="text-sm md:text-lg font-normal tracking-[3px] uppercase">{heroText}</h1>
+                                <h1 className="text-sm md:text-lg font-normal tracking-[3px]">{heroText}</h1>
                             </motion.div>
                             <div className="border w-1/4 md:w-[10%] mx-auto my-5"></div>
                             <motion.div

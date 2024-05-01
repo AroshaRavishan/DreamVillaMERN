@@ -1,24 +1,30 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import '../assets/custom-module.css';
 
-function Details({title1 , title2 ,description}) {
+function Details({ title1, title2, description }) {
     return (
         <motion.div
-          initial={{ opacity: 0, x: -50 }}  // Initial state: invisible and shifted left
-          animate={{ opacity: 1, x: 0 }}  
-          transition={{ duration: 1 }}   // Animation: fade in and move to the original position
+            initial={{ opacity: 0, x: -50 }}  // Initial state: invisible and shifted left
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}   // Animation: fade in and move to the original position
         >
             <div className="container mt-10 md:mt-30 relative">
                 <div class="">
-                    <div class="px-4 text-center mx-auto">
-                        <h1 class="text-sm md:text-lg font-medium">{title1}</h1>
-                        <div className="border-2 border-black-900 w-1/4 md:w-[10%] mx-auto my-5"></div>
-                        <p class="text-3xl md:text-6xl font-semibold mt-4">{title2}</p>
-                        <p class="text-sm md:text-lg font-light mt-5">{description}</p>
-                        <Link to="/contactus">
-                            <button class="mt-5 md:mt-10 border-2 border-solid border-indigo-600 rounded py-2 px-12 text-base md:text-xl text-indigo-600 hover:bg-indigo-600 hover:text-white mt-4 transition-color duration-300">Learn More</button>
-                        </Link>
+                    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10">
+                        <div class="flex items-center">
+                            <div class="text-left">
+                                <div className="">
+                                    <img src="https://themewagon.github.io/seapalace/img/home/bed-icon.png" alt="image"></img>
+                                </div>
+                                <h1 class="text-sm md:text-base font-medium mt-4 text-gold-100 tracking-[3px] uppercase">{title1}</h1>
+                                <p class="text-2xl md:text-4xl font-semibold mt-1 text-black-900">{title2}</p>
+                                <p class="text-sm md:text-base font-light mt-5">{description}</p>
+                                <p class="mt-6 text-gold-200 text-xl intro"><em>Maria...the Owner</em></p>
+                            </div>
+                        </div>
+                        <div class="hidden lg:block"><img loading="lazy" src="https://themewagon.github.io/harbor-lights/images/room-5.jpg" alt="Coporate-training-image" class="w-full" /></div>
                     </div>
                 </div>
             </div>

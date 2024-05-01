@@ -2,8 +2,9 @@
 import React from 'react';
 import WebLayout from '../Layouts/WebLayout';
 import { motion } from 'framer-motion';
-import Hero from '../Components/Hero';
+import HeroBanner from '../Components/HeroBanner';
 import ContactusForm from '../Components/ContactusForm';
+import ImageSlider from '../Components/ImageSlider';
 
 
 const Contactus = () => {
@@ -22,8 +23,9 @@ const Contactus = () => {
       transition={{ duration: 1 }}
     >
       <WebLayout title="Contact Us - Dream Villa">
-        <Hero backgroundImage={backgroundImage} heroText={heroText} heroDescription={heroDescription} heroDescription2={heroDescription2} />
+        <HeroBanner backgroundImage={backgroundImage} heroText={heroText} heroDescription={heroDescription} heroDescription2={heroDescription2} />
         <ContactusForm />
+        <ImageSlider />
       </WebLayout>
     </motion.div>
   );

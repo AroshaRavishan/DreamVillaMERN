@@ -10,13 +10,15 @@ export default {
             primary: '#4ade80',
 
             gold: {
-                900: '#E1B051'
+                100: '#978667',
+                200: '#555',
+                900: '#ebd7b2'
             },
             black: {
                 600: '#23242A',
                 700: '#474747',
                 800: '#383838',
-                900: '#000000'
+                900: '#333'
             },
         }
     },
@@ -770,7 +772,7 @@ export default {
         xxs: ["0.65rem", { lineHeight: "1rem" }],
         xs: ["0.75rem", { lineHeight: "1rem" }],
         sm: ["0.875rem", { lineHeight: "1.5rem" }],
-        base: ["1rem", { lineHeight: "1.5rem" }],
+        base: ["1rem", { lineHeight: "1.75rem" }],
         lg: ["1.125rem", { lineHeight: "1.75rem" }],
         xl: ["1.25rem", { lineHeight: "1.75rem" }],
         "2xl": ["1.5rem", { lineHeight: "2rem" }],
