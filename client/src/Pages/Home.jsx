@@ -7,6 +7,9 @@ import { motion } from "framer-motion";
 import Collection from "../Components/Collection";
 import VideoBanner from "../Components/VideoBanner";
 import Rooms from "../Components/Rooms";
+import MainFacilities from "../Components/MainFacilities";
+import Marquee from "../Components/marquee";
+import SecondaryDetails from "../Components/SecondaryDetails";
 
 function Home() {
   const backgroundVideo = "https://assets.mixkit.co/videos/preview/mixkit-sunset-on-a-beach-seen-from-a-terrace-44500-large.mp4";
@@ -14,10 +17,10 @@ function Home() {
   const heroDescription = "A unique Experience where to stay";
   const heroDescription2 = 'Choose from an extensive collection of courses and enhance your career opportunities and earning potential. Gain a strong foundation for professional and personal growth. Our popular qualifications are widely recognised and highly respected by employers and organisations, worldwide.';
 
-  const backgroundVideoBanner="https://cdn.pixabay.com/video/2021/10/28/93705-642181946_large.mp4";
+  const backgroundVideoBanner = "https://cdn.pixabay.com/video/2021/10/28/93705-642181946_large.mp4";
   const bannerText = "Luxury Hotel Experience"; // Replace this with the data you want to pass
   const bannerDescription = "Enjoy in a very Immersive Relax";
- 
+
   const productCards = [
     {
       id: 1,
@@ -63,8 +66,11 @@ function Home() {
             description={'Known to be one of the most charming villas in Bentota, exuding tropical charm and complemented with all modern amenities. The space is easily converted into a breezy open-plan living room from where you can go straight for a swim into the crystal-clear water of the swimming pool.'}
           />
         </motion.div>
-        <VideoBanner backgroundVideoBanner={backgroundVideoBanner} bannerText={bannerText} bannerDescription={bannerDescription}/>
-        <Rooms/>
+        <VideoBanner backgroundVideoBanner={backgroundVideoBanner} bannerText={bannerText} bannerDescription={bannerDescription} />
+        <Rooms />
+        <MainFacilities />
+        <Marquee text=" Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience Relax Enjoy Luxury Holiday Travel Discover Experience" />
+        <SecondaryDetails />
         <FacolitiesCard products={productCards} cardTitle={'Hello'} cardDescription={'HI'} />
         <Collection />
       </WebLayout>

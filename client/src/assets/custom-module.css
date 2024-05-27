@@ -2,11 +2,124 @@
     font-family: 'Caveat', cursive;
 }
 
-.pinned-image__container-overlay{
-    background: rgba(0,0,0,0.6);
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+/* videobanner */
+
+.pinned-image__container-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* rooms cards */
+
+.card-info {
+    background: -webkit-linear-gradient(top, transparent, #000);
+    background: linear-gradient(to bottom, transparent, #000);
+}
+
+.room-card {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* main facilities */
+
+.box_facilities-no-border {
+    border-width: 0 !important;
+}
+
+.box_facilities {
+    padding: 0 25px 25px 25px;
+    border-width: 2px;
+    text-align: center;
+    border-style: solid;
+    border-right-style: solid;
+    border-right: 0;
+    border-right-width: 0px;
+    border-image: linear-gradient(to bottom, #ededed, transparent) 1 60%;
+}
+
+@media (max-width: 1199px) {
+    .box_facilities {
+        border-width: 0;
+    }
+}
+
+/* marquee */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 140s linear infinite;
+    font-size: 120px;
+    white-space: nowrap;
+    will-change: transform;
+    font-weight: bold;
+    opacity: 0.05;
+    line-height: 1.2;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+/* ScrollProgressCircle.css */
+
+.scroll-progress-circle-container {
+    position: fixed;
+    bottom: 20px;
+    /* Adjust as needed */
+    right: 20px;
+    /* Adjust as needed */
+    width: 45px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 2;
+}
+
+.circle {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+.percentage {
+    fill: #007bff;
+    font-family: Arial, sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+}
+
+@keyframes progress {
+    from {
+        stroke-dasharray: 0 100;
+    }
 }
