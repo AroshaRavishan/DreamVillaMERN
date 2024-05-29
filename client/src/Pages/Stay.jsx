@@ -2,12 +2,12 @@
 import React from 'react';
 import WebLayout from '../Layouts/WebLayout';
 import Details from '../Components/Details';
-import Hero from '../Components/Hero';
+import HeroBanner from '../Components/HeroBanner';
 import { motion } from "framer-motion";
+import Roomssuits from '../Components/Roomssuits';
+import MainFacilities from "../Components/MainFacilities";
 
-
-
-const backgroundVideo = "https://cdn.pixabay.com/video/2017/08/01/11066-228113758_large.mp4";
+const backgroundImage = "https://www.ansonika.com/paradise/img/rooms/2.jpg";
 const heroText = "STAY WITH US"; // Replace this with the data you want to pass
 const heroDescription = "DREAM VILLA";
 const heroDescription2 = 'Choose from an extensive collection of courses and enhance your career opportunities and earning potential. Gain a strong foundation for professional and personal growth. Our popular qualifications are widely recognised and highly respected by employers and organisations, worldwide.';
@@ -21,8 +21,9 @@ const Stay = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}>
             <WebLayout title='Stay - Dream Villa'>
-            <Hero backgroundVideo={backgroundVideo} heroText={heroText} heroDescription={heroDescription} heroDescription2={heroDescription2} />
-                <Details title1={'Stay'} title2={'DREAM VILLA'} description={'Villa 700 boasts 5 spacious and luxurious rooms that offer guests a taste of luxury with a rustic Sri Lankan touch in terms of design. Each room comprises Wi-Fi, a flat-screen TV, and a host of thoughtful amenities you can expect from an elegant Induruwa hotel and villa.'} />
+            <HeroBanner backgroundImage={backgroundImage} heroText={heroText} heroDescription={heroDescription} heroDescription2={heroDescription2} />
+            <Roomssuits/>
+            <MainFacilities />
             </WebLayout>
         </motion.div>
     );
